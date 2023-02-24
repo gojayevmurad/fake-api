@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "MuseoModerno", cursive;
+}
+
+body {
+  background: linear-gradient(#e66465, #9198e5);
+  display: grid;
+  place-items: center;
+}
+
+.product--list {
+  width: 1350px;
+  background-color: #ddd;
+  padding: 40px;
+  margin: 50px 0;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  .product {
+    width: 27%;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    &__img {
+      width: 100%;
+      height: 300px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__category {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      text-transform: uppercase;
+      background-color: #ddd;
+      padding: 8px;
+      font-weight: 600;
+    }
+    &__details {
+        margin-top: 20px;
+      p {
+        height: 50px;
+        overflow: hidden;
+      }
+
+      &--cart{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            height: 40px;
+            width: 90px;
+            border: none;
+            cursor: pointer;
+            transition: .3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        p{
+            text-align: center;
+            line-height: 50px;
+        }
+      }
+
+      &--rating{
+        position: absolute;
+      }
+    }
+  }
+}
